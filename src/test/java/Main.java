@@ -1,6 +1,3 @@
-import java.util.Stack;
-import static org.junit.jupiter.api.Assertions.*;
-
 public class Main {
 
     public static boolean backspaceCompare(String s, String t) {
@@ -12,7 +9,7 @@ public class Main {
         for (char c : str.toCharArray()) {
             if (c != '#') {
                 builder.append(c);
-            } else if (builder.length() > 0) {
+            } else if (!builder.isEmpty()) {
                 builder.deleteCharAt(builder.length() - 1);
             }
         }
